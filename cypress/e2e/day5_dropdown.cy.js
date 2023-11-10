@@ -1,7 +1,7 @@
 describe("handle dropdowns", () => {
   it("dropdowns with select option", () => {
     cy.visit("https://testautomationpractice.blogspot.com/");
-    cy.get("#country").select("Japan").should("have.value", "Japan");
+    cy.get("#country").select("Japan").should("have.value", "japan");
   });
 
   //it.skip means this test will not run
