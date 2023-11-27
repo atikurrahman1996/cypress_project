@@ -45,6 +45,8 @@ describe("javascript alerts", () => {
 
   it.skip("Js prompt alert ", () => {
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts");
+
+    // this event will open before window open
     cy.window().then((win) => {
       cy.stub(win, "prompt").returns("welcome atik");
     });
