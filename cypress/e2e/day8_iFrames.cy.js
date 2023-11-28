@@ -23,3 +23,4 @@ describe("handling frames", () => {
 });
 
 //handling ifrmaes using pluging Installation: npm install -D cypress-iframe
+// Then Import "import "cypress-iframe"; beggining of the test case
