@@ -16,3 +16,4 @@ describe("handle drag and drop", () => {
 
 // drag and drop using plugin > install >npm install --save-dev @4tw/cypress-drag-drop
 // import package begging of the test case > import '@4tw/cypress-drag-drop'
+// if drag and drop not works automatically used { force: true}
