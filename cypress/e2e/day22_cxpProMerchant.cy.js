@@ -3,19 +3,19 @@ describe("Pro Merchant Creating- Test", () => {
 
   beforeEach("Login to connexpay ", () => {
     cy.visit("https://stagecrm.connexpay.com/Merchant/AllMerchant");
-    cy.get("#Username").type("arahmanstagecrm");
-    cy.get("#Password").type("Atik123456789");
+    cy.get("#Username").type("abc123");
+    cy.get("#Password").type("abc123");
     cy.get(
       "button[class='btn btn-info btn-block text-uppercase waves-effect waves-light login-btn']"
     ).click();
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get("#nav-crm").trigger("mouseover", { force: true });
 
     // Find the DEALS link and click on it
 
     cy.get("#nav-crm-deals").click({ force: true });
-    cy.wait(3000);
+    cy.wait(5000);
   });
 
   //Prospect Detail
@@ -23,9 +23,9 @@ describe("Pro Merchant Creating- Test", () => {
   it("Create merchnat-Prospect Details", () => {
     cy.get("a[title='Create Create Prospect']").click();
 
-    cy.wait(3000);
+    cy.wait(5000);
 
-    cy.get("#DBAName").type("ATIK QA TEST26");
+    cy.get("#DBAName").type("ATIK CXP TEST");
     cy.get("#EncryptedIdCountry").select("United States");
     cy.get("#Address1").type("3615 South Hope Street, Los Angeles, CA, USA");
     cy.get("#Address2").type("6");
@@ -36,22 +36,22 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("#FirstName").type("Atikur");
     cy.get("#LastName").type("Rahman");
     cy.get("#Phone").type("22224455555");
-    cy.get("#Email").type("atikccxp96@gmail.com");
+    cy.get("#Email").type("atikcxp96@gmail.com");
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get("#ProjectedVolumeStr").clear().type("1000000");
     cy.wait(3000);
     cy.get("#btnCreateMerchant").click();
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     //Agents
 
     cy.get("#ddlOffice_chosen").click({ force: true }); // Click to open the dropdown
     cy.get("ul.chosen-results li").contains("ConnexPay").click(); // Click on the option
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get("#ddlAgents_chosen").click(); // Click to open the dropdown
     cy.get("ul.chosen-results li")
@@ -64,13 +64,13 @@ describe("Pro Merchant Creating- Test", () => {
       ".btn.btn-primary.button-next.btn-rounded.btn-labeled.fa.fa-angle-right"
     ).click();
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     //Services
 
     cy.get("#IdCurrency").select("US Dollar");
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get(
       "body > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(49) > form:nth-child(1) > div:nth-child(13) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(36) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(3) > small:nth-child(1)"
@@ -78,7 +78,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     cy.get("#lHhlkcIIqrmCU6GmM9KPrw").click({ force: true });
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get(
       "body > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(49) > form:nth-child(1) > div:nth-child(13) > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(36) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(3) > small:nth-child(1)"
@@ -86,7 +86,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     cy.get("#MerchantSetting_IdFundingType").select("Flex");
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get("#MerchantSetting_AvailableToIssuePlusStr").type("10000");
     cy.wait(3000);
@@ -103,7 +103,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     cy.get("#Central_4").type("100.00", { force: true });
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get(
       ".btn.btn-primary.button-next.btn-rounded.btn-labeled.fa.fa-angle-right"
@@ -113,7 +113,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     //DBA Info
 
-    cy.get("#MerchantAlias").type("ATIK QA TEST26", { force: true });
+    cy.get("#MerchantAlias").type("ATIK CXP TEST", { force: true });
     cy.get(
       "div[class='widget-header'] div[class='col-sm-12'] div[class='row'] span[class='switchery switchery-default'] small"
     ).click({ force: true });
@@ -127,7 +127,7 @@ describe("Pro Merchant Creating- Test", () => {
       ".btn.btn-primary.button-next.btn-rounded.btn-labeled.fa.fa-angle-right"
     ).click({ force: true });
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     //Principal
 
@@ -155,9 +155,7 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("#Owner_Address_Zip").type("263333", { force: true });
     cy.get("#Owner_Address_City").type("NY", { force: true });
     cy.get("#Owner_Address_StateDescription").type("VCSD", { force: true });
-    cy.get("#Owner_Email").type("arabcde@gmail.com", {
-      force: true,
-    });
+    cy.get("#Owner_Email").type("abababab@gmail.com", { force: true });
     cy.get("#Owner_HomePhone").type("523523525235", { force: true });
     cy.get("#Owner_Mobile").type("4547564575", { force: true });
 
@@ -175,7 +173,7 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get(
       ".btn.btn-primary.button-next.btn-rounded.btn-labeled.fa.fa-angle-right"
     ).click({ force: true });
-    cy.wait(4000);
+    cy.wait(6000);
 
     //Merchant Information
 
@@ -184,7 +182,7 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("#YearsInBusiness").type("11", { force: true });
     cy.get("#MonthsInBusiness").type("11", { force: true });
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     cy.get("#EncryptedIdOwnership").select("Corporation Private", {
       force: true,
@@ -207,7 +205,7 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("ul.chosen-results li")
       .contains("6010 - Financial Institutions – Manual Cash Disbursements")
       .click({ force: true });
-    cy.wait(3000);
+    cy.wait(5000);
 
     // Clear the existing value > input value
     cy.get("#AverageMonthlySalesVolumeStr").clear({ force: true });
@@ -230,7 +228,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     cy.get("#WebSiteAddress").type("www.services.com", { force: true });
 
-    cy.wait(3000);
+    cy.wait(5000);
 
     // Banking Information
 
@@ -282,23 +280,13 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get('a[data-save="SubmitForUW"]').click({ force: true });
     //cy.get('a.btn.btn-success.button-submit.btn-rounded.btn-labeled.fa.fa-angle-right').click({ force: true });
 
-    cy.wait(20000);
-
-    // Click Unclaim by UW
-
-    cy.get(
-      "a[href='https://stagecrm.connexpay.com/Merchant/UnclaimedByUnderwriting']"
-    ).click({ force: true });
+    cy.wait(5000);
 
     //Underwriting Claim > Full-Approval > confirm
 
-    cy.wait(5000);
-
-    cy.get("tbody tr:nth-child(1) td:nth-child(5) a:nth-child(1)").click({
+    cy.get("a.btn.btn-success.btn-rounded.btn-labeled.fa.fa-gavel").click({
       force: true,
     });
-
-    //cy.get("tbody tr:nth-child(1) td:nth-child(5) a:nth-child(1)").click({force: true});
 
     cy.wait(3000);
     //cy.get("tbody tr:nth-child(1) td:nth-child(5) a:nth-child(1)").click({force: true});
@@ -318,13 +306,7 @@ describe("Pro Merchant Creating- Test", () => {
 
     //Setup/Complaince > claim
 
-    cy.get(
-      "a[href='https://stagecrm.connexpay.com/Merchant/UnclaimedByInstaller']"
-    ).click({ force: true });
-
-    cy.wait(5000);
-
-    cy.get("tbody tr:nth-child(1) td:nth-child(5) a:nth-child(1)").click({
+    cy.get("tbody tr:nth-child(2) td:nth-child(5) a:nth-child(1)").click({
       force: true,
     });
     cy.wait(3000);
@@ -347,7 +329,9 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("#FraudSetting_Mid").type("460000", { force: true });
 
     // delayed activation toggle on
-    //cy.get("#ProcessingSetting_AllowDelayedSalesActivation").click({ force: true });
+    cy.get(
+      "body.breakpoint-1200:nth-child(2) div.container:nth-child(1) div.ng-scope:nth-child(8) div.col-sm-12:nth-child(3) form.form-vertical.ng-pristine.ng-valid div.form-body:nth-child(31) div.tab-content:nth-child(1) div.widget.box.prospect-detail:nth-child(5) div.widget-content:nth-child(2) div.row.margin-top-20:nth-child(12) div.col-sm-12 h5:nth-child(1) span.switchery.switchery-default > small:nth-child(1)"
+    ).click({ force: true });
 
     // Bank Issuing Percent
     cy.get("#Central_4").type("100.00", { force: true });
@@ -355,11 +339,15 @@ describe("Pro Merchant Creating- Test", () => {
 
     //Show Card Brand and Card Class Options
 
-    //cy.get("").click({ force: true });
+    cy.get(
+      "body.breakpoint-1200:nth-child(2) div.container:nth-child(1) div.ng-scope:nth-child(8) div.col-sm-12:nth-child(3) form.form-vertical.ng-pristine.ng-valid div.form-body:nth-child(31) div.tab-content:nth-child(1) div.widget.box.prospect-detail:nth-child(5) div.widget-content:nth-child(2) div.row.margin-top-20:nth-child(16) div.col-sm-12 h5:nth-child(1) span.switchery.switchery-default > small:nth-child(1)"
+    ).click({ force: true });
 
     //Allow Supplier Code Card Class Selection
 
-    //cy.get("").click({ force: true });
+    cy.get(
+      "body.breakpoint-1200:nth-child(2) div.container:nth-child(1) div.ng-scope:nth-child(8) div.col-sm-12:nth-child(3) form.form-vertical.ng-pristine.ng-valid div.form-body:nth-child(31) div.tab-content:nth-child(1) div.widget.box.prospect-detail:nth-child(5) div.widget-content:nth-child(2) div.row.margin-top-20:nth-child(17) div.col-sm-12 h5:nth-child(1) span.switchery.switchery-default > small:nth-child(1)"
+    ).click({ force: true });
 
     //Allowed Purchase Types
 
@@ -400,7 +388,7 @@ describe("Pro Merchant Creating- Test", () => {
     cy.get("#ProcessingSetting_DaysToDelayBasedOnRiskScore").type("5", {
       force: true,
     });
-    cy.get("#ProcessingSetting_DaysToDelayExceedRiskScore").type("2", {
+    cy.get("ProcessingSetting_DaysToDelayExceedRiskScore").type("2", {
       force: true,
     });
     cy.get("#MaxACHSaleTransactionAmount").type("1000", {
@@ -411,9 +399,6 @@ describe("Pro Merchant Creating- Test", () => {
     // Set as complete
 
     cy.get("#btnComplete").click({ force: true });
-
-    cy.get("#btn1DefaultModal1").click({ force: true });
-
-    cy.wait(25000);
+    cy.wait(5000);
   });
 });
