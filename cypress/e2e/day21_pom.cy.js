@@ -9,6 +9,7 @@ describe("MyTestSuit", () => {
     );
     cy.get("input[placeholder='Username']").type("Admin");
     cy.get("input[placeholder='Password']").type("admin123");
+    cy.wait(3000);
     cy.get("button[type='submit']").click();
     cy.get(".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module").should(
       "have.text",
@@ -16,16 +17,18 @@ describe("MyTestSuit", () => {
     );
   });
 
-  // using page object model (pom) // import pageObjectModel LoginPage.js file
+  // using page object model (pom) // import LoginPage.js from PageObjectsModel
 
-  it.only(" Login Test using POM", () => {
+  it.only("Login Test using POM", () => {
     cy.visit(
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
     );
-    const ln = new Login();
-    ln.setUserName("Admin");
-    ln.setPassword("admin123");
-    ln.clickSubmit();
-    ln.verifyLogin();
+    const login = new Login();
+    login.setUserName("Admin");
+    login.setPassword("admin123");
+    cy.wait(3000);
+    login.clickSubmit();
+    cy.wait(3000);
+    login.verifyLogin();
   });
 });

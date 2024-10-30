@@ -7,12 +7,12 @@ describe(" check UI elements", () => {
     cy.get("#male").should("be.visible");
     cy.get("#female").should("be.visible");
 
-    // check radio button
+    // check radio button checked
 
-    cy.get("#male").check().should("be.checked");
+    cy.get("#male").check().should("be.checked"); // male should be selected
     cy.get("#female").should("not.be.checked");
 
-    cy.get("#female").check().should("be.checked");
+    cy.get("#female").check().should("be.checked"); // female should be selected
     cy.get("#male").should("not.be.checked");
 
     // selecting checkbox

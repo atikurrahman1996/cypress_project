@@ -1,5 +1,6 @@
 describe("MyTestSuit", () => {
   //Direct access without using fixtures file & hooks
+
   /*
   it("Test without fixtures file", () => {
     cy.visit(
@@ -16,7 +17,7 @@ describe("MyTestSuit", () => {
   });
   */
 
-  //Direct access using fixtures file
+  //Direct access using fixtures file ( we need to create a fixture file with some data)
 
   it.skip("Fixtures Test", () => {
     cy.visit(
@@ -35,14 +36,14 @@ describe("MyTestSuit", () => {
 
   //access using fixtures file and hooks for multiple it blocks
 
-  let userdata; // global variable
+  let userdata; // declare a global variable
   before(() => {
     cy.fixture("OrangeHRM.json").then((data) => {
       userdata = data;
     });
   });
 
-  it.only("Fixtures Test", () => {
+  it.only("Fixtures Test-positive", () => {
     cy.visit(
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
     );

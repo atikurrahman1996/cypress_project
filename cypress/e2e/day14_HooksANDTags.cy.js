@@ -1,5 +1,5 @@
 //Hooks:/before/after/beforeEach/afterEach
-//Tags:/skipp/only
+//Tags:/skip/only
 
 describe("MyTestSuit", () => {
   before(() => {

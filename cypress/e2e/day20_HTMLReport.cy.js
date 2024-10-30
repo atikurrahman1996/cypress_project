@@ -4,6 +4,7 @@ describe("MyTestSuit", () => {
     cy.screenshot("Homepage"); // this will take home page screenshoot
     cy.wait(5000);
     cy.get("img[title='Your Store']").screenshot("Logo"); // this will take screenshoot for specific element
+    cy.wait(5000);
   });
 
   // negative test
@@ -12,7 +13,8 @@ describe("MyTestSuit", () => {
     cy.visit("https://demo.opencart.com/"); //  Lunch URL
     cy.wait(5000);
     cy.get("li:nth-child(7) a:nth-child(1)").click(); // Click on Camera section
-    cy.get("div[id='content'] h2").should("have.text", "Tablets"); // Validation for Camera, but we put Tablets for  failure testing purose
+    cy.wait(5000);
+    cy.get("div[id='content'] h2").should("have.text", "Tablets"); // Validation for Camera, but I put Tablets for  failure testing purose
   });
 });
 
@@ -21,9 +23,9 @@ describe("MyTestSuit", () => {
 /*
 1. install cypress-mochawesome-reporter> npm i --save-dev cypress-mochawesome-reporter
 
-2. Change cypress reporter & setup hooks
+2. Change cypress reports & setup hooks
 
-Edit config file (cypress.config.js by default)
+Edit cypress.config.js file (cypress.config.js by default)
 
 const { defineConfig } = require('cypress');
 

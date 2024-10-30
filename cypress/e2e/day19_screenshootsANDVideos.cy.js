@@ -16,6 +16,7 @@ describe("MyTestSuit", () => {
     cy.visit("https://demo.opencart.com/"); //  Lunch URL
     cy.wait(5000);
     cy.get("li:nth-child(7) a:nth-child(1)").click(); // Click on Camera section
+    cy.wait(3000);
     cy.get("div[id='content'] h2").should("have.text", "Tablets"); // Validation for Camera, but we put Tablets for  failure testing purose
   });
 });

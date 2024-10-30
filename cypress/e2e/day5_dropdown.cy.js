@@ -1,16 +1,21 @@
 describe("handle dropdowns", () => {
-  it("dropdowns with select option", () => {
+  it.skip("dropdowns with select option", () => {
     cy.visit("https://testautomationpractice.blogspot.com/");
-    cy.get("#country").select("Japan").should("have.value", "japan");
+    cy.get("#country").select("Canada").should("have.value", "canada");
   });
 
-  //it.skip means this test will not run
-
-  it("dropdowns without select option", () => {
+  it.only("dropdowns without select option", () => {
     cy.visit("https://www.dummyticket.com/dummy-ticket-for-visa-application/");
 
+    cy.wait(5000);
+
     cy.get("#select2-billing_country-container").click();
+
+    cy.wait(5000);
+
     cy.get(".select2-search__field").type("Bangladesh").type("{enter}");
+
+    cy.wait(5000);
 
     cy.get("#select2-billing_country-container").should(
       "have.text",
@@ -18,10 +23,13 @@ describe("handle dropdowns", () => {
     );
   });
 
-  it.skip("auto suggestion dropdowns ", () => {
+  it("auto suggestion dropdowns ", () => {
     cy.visit("https://www.wikipedia.org/");
 
     cy.get("#searchInput").type("Delhi");
+
+    cy.wait(5000);
+
     cy.get(".suggestion-title").contains("Delhi University").click();
   });
 
