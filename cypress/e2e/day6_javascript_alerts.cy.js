@@ -19,7 +19,7 @@ describe("javascript alerts", () => {
 
   //Js confirmation alert, it will comes with OK & Cancel Button
 
-  it.skip("Js confirm alert-Clicked Ok ", () => {
+  it.skip("Js confirm alert-Clicked Ok ", () => {r[.]
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts");
 
     cy.get("button[onclick='jsConfirm()']").click();
@@ -35,6 +35,7 @@ describe("javascript alerts", () => {
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts");
 
     cy.get("button[onclick='jsConfirm()']").click();
+    
 
     // validate window alert -optional
     cy.on("window: confirm", (win) => {
