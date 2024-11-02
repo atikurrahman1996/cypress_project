@@ -1,9 +1,9 @@
 describe("MyTestSuit", () => {
   it("Positive-To generate HTML Report", () => {
     cy.visit("https://demo.opencart.com/"); //  Lunch URL
-    cy.screenshot("Homepage"); // this will take home page screenshoot
+    cy.screenshot("Homepage"); // this will take home page screenshot
     cy.wait(5000);
-    cy.get("img[title='Your Store']").screenshot("Logo"); // this will take screenshoot for specific element
+    cy.get("img[title='Your Store']").screenshot("Logo"); // this will take screenshot for specific element
     cy.wait(5000);
   });
 

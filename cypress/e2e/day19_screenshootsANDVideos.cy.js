@@ -1,15 +1,15 @@
 describe("MyTestSuit", () => {
-  // when our test result was failed cypress will take screenshoot autometically
-  // for intentionally taking screenshoot we can use these below method
+  // when our test result was failed cypress will take screenshot automatically
+  // for intentionally taking screenshot we can use these below method
 
   it.skip("Captured ScreenShoot and Videos", () => {
     cy.visit("https://demo.opencart.com/"); //  Lunch URL
-    cy.screenshot("Homepage"); // this will take home page screenshoot
+    cy.screenshot("Homepage"); // this will take home page screenshot
     cy.wait(5000);
-    cy.get("img[title='Your Store']").screenshot("Logo"); // this will take screenshoot for specific element
+    cy.get("img[title='Your Store']").screenshot("Logo"); // this will take screenshot for specific element
   });
 
-  // automatically captured screenshoot and videos for failure test or error test
+  // automatically captured screenshot and videos for failure test or error test
   // negative test
 
   it("Captured ScreenShoot and Videos", () => {
@@ -21,4 +21,4 @@ describe("MyTestSuit", () => {
   });
 });
 
-// To verify the auto screenshoots and videos for failure test go the terminal > npx cypress run --spec (file path)
+// To verify the auto screenshot and videos for failure test go the terminal > npx cypress run --spec (file path)

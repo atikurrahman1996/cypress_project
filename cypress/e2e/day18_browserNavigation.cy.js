@@ -1,5 +1,5 @@
 describe("MyTestSuit", () => {
-  it("Browser navigations Test", () => {
+  it("Browser navigation Test", () => {
     cy.visit("https://demo.opencart.com/"); //  Lunch URL
     cy.title().should("eq", "Your Store"); // Title of the page
     cy.wait(5000);

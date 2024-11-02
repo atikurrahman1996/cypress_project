@@ -56,5 +56,5 @@ describe("MyTestSuit", () => {
     );
   });
 });
-
+//The cy.fixture() command is used to load data from a fixture file.
 // use fixture file we need to create a json file in the fixtures folder after that we can import this file to our test
