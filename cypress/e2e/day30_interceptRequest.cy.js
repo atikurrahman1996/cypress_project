@@ -47,26 +47,29 @@ describe("Intercept Example", () => {
           type: "single",
           accessible: true,
           image: "/images/room2.jpg",
-          description: " Testing",
+          description: " Testing", // I modified the description and it will visible in the website
           features: ["TV", "WiFi", "Safe"],
           roomPrice: 100,
         },
       ],
     });
 
+    // We can use intercept to see UI behaviors modifying the mock response without back end.
+    // Exp: If we remove rooms array objects and just keep empty array we will get response.
+
     cy.visit("https://automationintesting.online/");
 
-    // cy.wait("@comments").then((intercept) => {
-    //   expect(intercept.response.body.limit).to.equal(10);
-    //   expect(intercept.response.body.name).to.equal(
-    //     "learning intercept using mock api"
-    //   );
-    // });
+    cy.request("https://automationintesting.online/room/").then((response) => {
+      expect(response.status).to.equal(200);
+      expect(response.body.rooms[0].roomName).to.equal("101");
+      cy.log(JSON.stringify(response.body));
+    });
   });
 });
 
 //The cy.intercept() command is used to intercept a network request and provide a mock response.
 //That is, cy.intercept is usually used in conjunction with two other commands, .as and cy.wait.
+// We can use intercept to see UI behaviors modifying the mock response without back end
 
 /*
 cy.intercept
