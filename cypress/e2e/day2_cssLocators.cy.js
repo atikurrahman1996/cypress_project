@@ -1,5 +1,5 @@
 describe("CSSLocator", () => {
-  it("csslocator", () => {
+  it("CSS -Locator", () => {
     cy.visit("http://automationpractice.pl/index.php");
 
     cy.get("#search_query_top").type("T-Shirts"); // id
