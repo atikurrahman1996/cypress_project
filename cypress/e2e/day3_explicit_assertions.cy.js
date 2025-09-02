@@ -17,7 +17,7 @@ describe("Assertions example", () => {
     cy.get(".oxd-userdropdown-name").then((x) => {
       let actName = x.text();
 
-      //BDD Style > Behaviour Driven Development
+      //BDD Style > Behavior Driven Development
 
       //expect(actName).to.equal(expName);
       //expect(actName).to.not.equal(expName); // negative assertion

@@ -2,13 +2,19 @@ describe("My First Test Suite", () => {
   it("Verify title-positive ", () => {
     cy.visit("https://connexpay.com/");
     cy.wait(3000);
-    cy.title().should("eq", "ConnexPay - All-in-One B2B Payments Platform");
+    cy.title().should(
+      "eq",
+      "B2B Payments Connecting Sales & Supplier Payments | ConnexPay"
+    );
   });
 
   it("verify title-negative test", () => {
     cy.visit("https://connexpay.com/");
 
-    cy.title().should("eq", "ConnexPay - All-in-One B2C Payments Platform");
+    cy.title().should(
+      "eq",
+      "B2B Payments Connecting Sales & Supplier Payments | ConnexPay"
+    );
   });
 
   it("finding webpage actual title", () => {

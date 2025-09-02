@@ -14,11 +14,12 @@ describe("My First Test Suite", () => {
     cy.on("window: confirm", (win) => {
       expect(win).to.contains("Are you sure?");
     });
-    cy.get("tbody tr:nth-child(3) td:nth-child(2) a:nth-child(1)").click({
+
+    cy.wait(5000);
+    cy.get("button[id='form[checkIn]']").click({
       force: true,
     });
-    cy.wait(3000);
-    cy.get(":nth-child(3) > :nth-child(2) > .btn").click({ force: true });
-    cy.wait(10000);
+    cy.wait(2000);
+    cy.get("#btnContinue").click({ force: true });
   });
 });
