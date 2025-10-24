@@ -8,3 +8,5 @@ describe("Select Drop-Down Option", () => {
     cy.get("#twotabsearchtextbox").type("games{enter}", { force: true });
   });
 });
+
+//Assessment test demo
