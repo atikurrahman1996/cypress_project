@@ -56,6 +56,6 @@ describe("auto test recorder", () => {
 
 /*
 To record cypress test add > experimentalStudio: true ( in the cypress.config file under e2e)
-Create a test file > write describe block and it block > open cypress ui > click on it block and add url > click continue > do actions > save> return to VC code
+Create a test file > write describe block and it block > open cypress ui -> Run test > click on it block and add url > click continue > do actions > save> return to VC code
 
 */
